@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('fonts/RobotoSlab-Regular.woff') format('woff'), 
+		url('fonts/RobotoSlab-Regular.ttf') format('truetype'), 
+		url('fonts/RobotoSlab-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-color: #20292e;
+}
+
+.compass .body {
+	position: relative;
+	display: block;
+	width: 520px;
+	height: 520px;
+	background: url("../images/disc.png") no-repeat;
+}
+
+.compass .scale {
+    font-family: 'Roboto Slab', serif;
+	color: #fff;
+	text-shadow: 1px 2px 5px #00000078;
+ 
+	position: absolute;
+    top: 144px;
+    /* top: calc(100% - 250px) / 2; */
+    left: 145px;
+    width: 250px;
+    height: 250px;
+    background: url(../images/center.png) no-repeat center center;
+	/* margin: auto; */
+	/* vertical-align: middle; */
+    text-align: center;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.compass .scale .pole {
+    text-align: center;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 48px;
+}
+.compass .scale .degrees {
+	position: relative;
+    text-align: center;
+	font-weight: 100;
+	font-size: 40px;
+	line-height: 47px;
+}
+.compass .scale .degrees::after {
+	content: '\00B0';
+	position: absolute;
+	top: 0;
+	right: -20px;
+}
